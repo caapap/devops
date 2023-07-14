@@ -122,7 +122,6 @@ server {
  } 
  #location / { 
  # root /usr/share/nginx/html; 
-BBT_v3.1.0 部署手册 
  # index index.html index.htm; 
  #} 
  #error_page 404 /404.html; 
