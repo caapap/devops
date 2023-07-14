@@ -9,18 +9,18 @@
 # 1.openssl-libs-1.0.2k-19.el7.x86_64.rpm
 # 2.openssl-1.0.2k-19.el7.x86_64.rpm
 # 3.nginx-1.20.2-1.el7.ngx.x86_64.rpm
-repo1=openssl-libs-1.0.2k-19.el7.x86_64.rpm
-repo2=openssl-1.0.2k-19.el7.x86_64.rpm
-repo=nginx-1.20.2-1.el7.ngx.x86_64.rpm
+
 
 ###### variable on bk #########
-soft_dir=/iflytek/soft
+#soft_dir=/iflytek/soft
 #download_repo_ip=:5000/repo
-server_ip=172.31.18.212
+#server_ip=
 
 ###### variable on script #####
 conf_dir=/etc/nginx/conf.d/default.conf
-
+repo1=openssl-libs-1.0.2k-19.el7.x86_64.rpm
+repo2=openssl-1.0.2k-19.el7.x86_64.rpm
+repo=nginx-1.20.2-1.el7.ngx.x86_64.rpm
 
 
 mkdir -p /iflytek/data/dtp/ 
