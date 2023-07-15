@@ -6,6 +6,15 @@
 ip_info=`ifconfig|grep -v virbr0|grep -v lo|grep -v docker0|grep -A 1 "RUNNING" |grep inet|awk '{print $2}'`
 IP=`ifconfig|grep -v virbr0|grep -v lo|grep -v docker0|grep -A 1 "RUNNING" |grep inet|awk '{print $2}'`
 
+## aliyun source repo
+mv -f /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+mv /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel.repo.backup
+wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
+yum clean all
+yum makecache
+yum -y update
+
 cat <<EOF > ~/.vimrc
 syntax on
 set tabstop=2
