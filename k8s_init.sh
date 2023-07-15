@@ -33,7 +33,6 @@ EOF
 
 echo "localhost is:$IP"
 
-
 _waitcheck() {
 countdown=3
 while [ $countdown -ge 0 ]; do
