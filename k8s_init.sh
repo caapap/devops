@@ -24,7 +24,6 @@ EOF
 
 echo "localhost is:$IP"
 
-
 _waitcheck() {
 countdown=3
 while [ $countdown -ge 0 ]; do
@@ -49,6 +48,7 @@ systemctl status firewalld
 setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 swapoff -a
+sed -i 's/.*swap.*/#&/' /etc/fstab
 
 sed -ri "/config begin/,/config end/d" /etc/sysctl.conf
 cat <<EOF >> /etc/sysctl.conf
