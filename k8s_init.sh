@@ -58,6 +58,7 @@ systemctl status firewalld
 setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 swapoff -a
+sed -i 's/.*swap.*/#&/' /etc/fstab
 
 sed -ri "/config begin/,/config end/d" /etc/sysctl.conf
 cat <<EOF >> /etc/sysctl.conf
