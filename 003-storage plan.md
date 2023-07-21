@@ -51,7 +51,7 @@ https://medium.com/volterra-io/kubernetes-storage-performance-comparison-v2-2020
 
   - 顺序读/写测试显示的结果与随机测试相似
   - 顺序读：Longhorn ≈ OpenEBS ≈ Ceph
-  - 顺序写：Longhorn   ≈ OpenEBS 1.5x> Ceph 
+  - 顺序写：Longhorn ≈ OpenEBS 1.5x> Ceph 
 
 - 混合读/写IOPS
 
