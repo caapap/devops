@@ -1,10 +1,9 @@
 #!/bin/bash
 ###############################################
-# Desc: 一键安装zookeeper,kafka,kafka manager,zkui
+# Desc: deploy zookeeper,kafka,kafka manager,zkui
 # Date: 2023-07-19
 # Version: 1.0
-# Reference: 部署手册_BBT_v3.1.0.docx
-# Author: zjma6
+# Author: caapap
 ###############################################
 
 ###### repo list #####
