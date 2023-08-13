@@ -1,0 +1,15 @@
+
+#Windows 10/ Windows 11 KMS 
+#Windows 10/11 Pro：W269N-WFGWX-YVC9B-4J6C9-T83GX
+#Windows 10/11 Enterprise：NPPR9-FWDCX-D2C8J-H872K-2YT43
+#Windows 10/11 Pro for Workstations：NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J
+# execute below
+slmgr /upk
+slmgr /ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J
+slmgr /skms 192.168.5.1
+slmgr /ato
+
+# actviate office
+cd "C:\Program Files\Microsoft Office\Office16"
+cscript ospp.vbs /sethst:192.168.5.1
+cscript ospp.vbs /act
