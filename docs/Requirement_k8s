@@ -1,0 +1,30 @@
+---kube 
+kubeadm v1.22.12
+kubectl v1.22.12
+kubelet v1.22.12
+
+---cni
+cni-plugins-linux-amd64-v0.9.1.tgz
+
+---network plugins
+etcd v3.4.13
+
+---docker
+docker v20.10.8
+
+---crictl
+crictl-v1.24.0-linux-amd64.tar.gz
+
+---registry
+harbor-offline-installer-v2.5.3.tgz
+docker-compose-linux-x86_64
+registry-2-linux-amd64.tar.gz
+
+---repository
+centos-7-amd64.iso
+
+---helm
+helm v3.9.0
+
+
+
