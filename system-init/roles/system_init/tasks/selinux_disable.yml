@@ -1,5 +1,0 @@
----
-- name: Selinux config
-  selinux: state=disabled
-  notify: Setenforce
-  tags: disable_selinux
