@@ -36,6 +36,9 @@ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 
+systemctl enable docker
+systemctl start docker
+
 cat <<EOF > ~/.vimrc
 syntax on
 set tabstop=2
