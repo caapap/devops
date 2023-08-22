@@ -3,8 +3,7 @@
 # Perform an initialization of k8s cluster #
 #############################################
 
-ip_info=`ifconfig|grep -v virbr0|grep -v lo|grep -v docker0|grep -A 1 "RUNNING" |grep inet|awk '{print $2}'`
-IP=`ifconfig|grep -v virbr0|grep -v lo|grep -v docker0|grep -A 1 "RUNNING" |grep inet|awk '{print $2}'`
+IP=ip -4 -o route get 10/8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p'
 
 ## aliyun source repo
 mv -f /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
@@ -33,17 +32,6 @@ EOF
 
 echo "localhost is:$IP"
 
-_waitcheck() {
-countdown=3
-while [ $countdown -ge 0 ]; do
-  echo "waiting to check...: $countdown s"
-    sleep 1
-      ((countdown--))
-      done
-      echo "continue..."
-}
-
-_waitcheck
 
 master=172.31.18.212 
 node1=172.31.18.213 
