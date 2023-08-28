@@ -16,7 +16,7 @@ source ~/.bashrc
 
 ## aliyun source repo
 yum install epel-release -y
-yum install -y wget gcc git jq net-tools yum-utils
+yum install -y wget gcc git jq net-tools yum-utils vim
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
@@ -51,5 +51,6 @@ sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 swapoff -a
 sed -i 's/.*swap.*/#&/' /etc/fstab
 
+yum remove epel-release -y
 echo "hostname is :$(hostname)"
 
