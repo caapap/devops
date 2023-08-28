@@ -16,7 +16,7 @@ source ~/.bashrc
 
 ## aliyun source repo
 yum install epel-release -y
-yum install -y wget gcc git jq net-tools yum-utils vim
+yum install -y wget gcc git jq net-tools yum-utils vim socat conntrack ebtables ipset
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
