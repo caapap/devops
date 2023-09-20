@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
         # The regular expression here is to match the image name starting with hub.bk
         # The actual use of the need to adjust their own
-        m = re.match(r'(^hub.bk[^\s]*\s*)\s([^\s]*\s)', line)
+        m = re.match(r'(^docker.io[^\s]*\s*)\s([^\s]*\s)', line)
         if not m:
             continue
         # image name 
